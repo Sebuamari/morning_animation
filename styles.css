@@ -1,0 +1,150 @@
+/* body {
+    background-color: #87CEEB;
+    opacity: 0.1;
+} */
+
+#house {
+    width: auto;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+}
+
+#birds,
+#birds1 {
+    position: absolute;
+    z-index: 1;
+    width: 400px;
+    height: auto;
+    right: 0;
+    top: 60vh;
+}
+
+#birds {
+    left: -400px;
+    right: unset; 
+    animation: flyBirds 10s infinite;
+}
+
+#birds1 {
+    animation: flyBirds1 15s infinite;
+}
+
+#sun {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    z-index: 3;
+    overflow: hidden;
+    animation: lightUp 3s infinite;
+}
+
+#sun img {
+    position: absolute;
+    width: auto;
+    height: 100vh;
+}
+
+#sun img:nth-child(1) {
+    right: -200px;
+}
+
+#sun img:nth-child(2) {
+    right: -100px;
+    top:-100px;
+    animation: moveSun 2s infinite;
+}
+
+#sun img:nth-child(3) {
+    right: 0;
+    animation: moveSun2 2s infinite;
+}
+
+#sun img:nth-child(4) {
+    right: 100px;
+}
+
+#cloud {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top:0;
+    animation: moveCloud 20s infinite;
+}
+
+@keyframes lightUp {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveSun {
+    0% {
+        right: -100px; 
+    }
+    50% {
+        right: -70px;
+    }
+    100% {
+        right:  -100px;
+    }
+}
+
+@keyframes moveSun2 {
+    0% {
+        right: 0; 
+    }
+    50% {
+        right: 20px;
+    }
+    100% {
+        right:  0;
+    }
+}
+
+@keyframes flyBirds {
+    0% {
+        left: -400px;
+        top: 30vw;
+    }
+    100% {
+        left: 600px;
+        top: -300px;
+    }
+}
+
+@keyframes flyBirds1 {
+    0% {
+        right: 0;
+        top: 60vh;
+    }
+    100% {
+        right: 100vw;
+        top: 50vh;
+    }
+}
+
+@keyframes moveCloud {
+    0% {
+        left: 0;
+        top: 0;
+    } 
+    50% {
+        left: 10vw;
+        top: 10vh;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
